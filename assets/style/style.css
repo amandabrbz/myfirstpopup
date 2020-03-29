@@ -14,7 +14,7 @@ main {
 
 .card-container {
   width: 270px;
-  margin: 60px 60px;
+  margin: 100px;
 }
 
 .card {
@@ -69,7 +69,63 @@ main {
   line-height: 40px;
   text-decoration: none;
   border-radius: 10px;
-  margin: 10px 0;
+  margin: 0 0 10px;
   padding: 0 30px;
   box-sizing: border-box;
+}
+
+#modal-promocao {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgb(255, 255, 255, 0.7);
+  z-index: 200;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-container .mostrar {
+  display: flex;
+}
+
+.modal {
+  background-color: aquamarine;
+  width: 60%;
+  min-width: 300px;
+  max-width: 600px;
+  padding: 40px;
+  border: 10px solid fuchsia;
+  position: relative;
+}
+
+.mostrar .modal {
+  animation: modal 0.3s;
+}
+
+@keyframes modal {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -60px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.close {
+  position: absolute;
+  top: -25px;
+  right: -25px;
+  width: 40px;
+  height: 40px;
+  color: fuchsia;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.3em;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.3);
 }

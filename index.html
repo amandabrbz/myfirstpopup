@@ -6,24 +6,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PopUp</title>
   <link rel="stylesheet" href="assets/style/style.css" />
+
 </head>
 
 <body>
   <main>
-    <div class="card-container">
+    <article class="card-container">
       <div class="card">
-        <div class="card-txt">
-          <h1>
+        <header class="card-txt">
+          <h1 class="tittle">
             My First POP-UP
           </h1>
-        </div>
+        </header>
         <div class="card-btn">
-          <button type="button" class="btn">Clique para abrir</button>
+          <button type="button" class="btn" onclick="iniciaModal()">Clique para abrir</button>
         </div>
       </div>
-    </div>
-
+    </article>
   </main>
+
+  <div id="modal-promocao" class="modal-container">
+    <div class="modal">
+      <button class="fechar">x</button>
+      <h3 style="color:#fff">hell</h3>
+    </div>
+  </div>
+
 </body>
 
 </html>
