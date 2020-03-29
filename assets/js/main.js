@@ -1,19 +1,22 @@
 window.onload = function() {
   function iniciaModal(modalID) {
-    if (localStorage.closeModal !== modalID) {
-      var modal = document.getElementById(modalID);
-      if (modal) {
-        modal.classList.add("mostrar");
-        modal.addEventListener("click", e => {
-          if (e.target.id == modalID || e.target.className == "fechar") {
-            modal.classList.remove("mostrar");
-            localStorage.closeModal = modalID;
-          }
-        });
-      }
+    const modal = document.getElementById(modalID);
+    if (modal) {
+      modal.classList.add("mostrar");
+      modal.addEventListener("click", e => {
+        if (e.target.id == modalID || e.target.className == "fechar") {
+          modal.classList.remove("mostrar");
+        }
+      });
     }
   }
 
-  var btn = document.querySelector(".tittle");
-  btn.addEventListener("click", () => iniciaModal("modal-promocao"));
+  const logo = document.querySelector(".card-btn .btn");
+  logo.addEventListener("click", () => iniciaModal("modal-promocao"));
+
+  document.addEventListener("scroll", () => {
+    if (window.pageYOffset > 800) {
+      iniciaModal("modal-promocao");
+    }
+  });
 };
