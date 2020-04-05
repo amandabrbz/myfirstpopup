@@ -1,4 +1,5 @@
 window.onload = function() {
+  var video = document.getElementById("videoJeff");
   function iniciaModal(modalID) {
     const modal = document.getElementById(modalID);
     if (modal) {
@@ -6,6 +7,7 @@ window.onload = function() {
       modal.addEventListener("click", e => {
         if (e.target.id == modalID || e.target.className == "fechar") {
           modal.classList.remove("mostrar");
+          video.remove(); //kill iframe
         }
       });
     }
