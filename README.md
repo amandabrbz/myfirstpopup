@@ -1,6 +1,6 @@
 # Hey! This is my first popup! Yay
 
-Using in this repository: HTML, CSS and Vanilla Javascript.
+The technology used in this repository was HTML, CSS and Vanilla Javascript.
 
 ## Result
 
