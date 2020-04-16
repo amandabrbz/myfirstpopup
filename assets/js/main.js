@@ -7,7 +7,7 @@ window.onload = function() {
       modal.addEventListener("click", e => {
         if (e.target.id == modalID || e.target.className == "fechar") {
           modal.classList.remove("mostrar");
-          video.remove(); //kill iframe
+          modal.remove(); //kill iframe
         }
       });
     }
